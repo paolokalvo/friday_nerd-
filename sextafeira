@@ -1,0 +1,145 @@
+prefixes = 'JKLMNOPQ'
+suffix = 'ack'
+for letter in prefixes:
+    print(letter + suffix)
+#A saída é:
+#Jack
+#Kack
+#Lack
+#Mack
+#Nack
+#Oack
+#Pack
+#Qack
+################################################################
+
+word = 'ananas'
+count = 0
+for letter in word:
+    if letter == 'a':
+        count = count + 1
+print(count)
+#####################################################################
+linhas = [
+            "    O poeta é um fingidor.      \n",
+            "    Finge tão completamente     \n",
+            "    Que chega a fingir que é dor\n",
+            "    A dor que deveras sente.    \n",
+            "                Fernando Pessoa.\n"
+            ]
+
+for linha in linhas:
+    linha_sem_brancos = linha.strip()
+    print(linha_sem_brancos)
+    palavras = linha_sem_brancos.split()
+    print(palavras)
+    
+   
+#################################################################################
+
+a= "fulano"
+n= len(a)
+
+#for k in range(n+1):
+#    print(a[:k])
+#print("--------")
+#for k in range (n,0,-1):
+#    print(a[:k], 'k=',k)
+
+#print ("______________________segundo metodo")
+
+k=0
+while k<n:
+    print(a[:k])
+    k=k+1
+k=n
+while k>=0:
+    print(a[:k])
+    k=k-1
+    
+####################################################################
+a= "atletico campeão do mundo "
+n=len(a)
+
+k=0
+while k<n:
+    print(a[:k])
+    k=k+1
+k=n
+while k>=0:
+    print(a[:k])
+    k=k-1
+    
+***********************************************************************************************************************
+
+
+print('DaTA por extenso')
+
+print("data")
+# Data por extenso . Faça um programa que solicite a data de nascimento (10/11/2010)
+
+a="20/03/2019"
+mesnome = ["janeiro","fevereiro","março","abril","maio","junho"]
+mes=int(a[3:5])-1
+
+
+print(a[:2],'de',mesnome[mes],'de',a[6:10])
+
+print(" ")
+a="20/03/2019"
+mesnome = [" ","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
+mes=int(a[3:5])
+
+
+print(a[:2],'de',mesnome[mes],'de',a[6:10])
+
+
+
+##########################################################################################################
+
+b = str(input("Digite uma frase "))
+#a=('a','e','i','o','u',"raul")
+#n=len(a)
+n=len(b)
+numvogal=0
+consoantes=[]
+for k in range(5):
+    if b[k] in ('a','e','i','o','u'):
+        print("achou vogal mane")
+        numvogal=numvogal+1
+    else:
+        consoantes.append(b[k])
+
+print("o numero de vogais=",numvogal)
+print("as consoantes são ",consoantes )
+
+
+#############################################################################################################################
+
+
+#s.find
+a = "a rosa branca"
+b = "rosa"
+print("aposição é ", a.find(b))
+print("aposição é ", a.find('roso'))
+print("aposição é ", b.find('o'))
+print('a posição é :', a.find('n'))
+
+##############################################################################################################################
+
+#faça um programa que leia um vetor de 10 caracteres e diga quantas
+#consoantes foram lidas . imprima as consoantes
+
+a=('a','e','i','o','u',"raul")
+n=len(a)
+numvogal=0
+consoantes=[]
+for k in range(5):
+    if a[k] in ('a','e','i','o','u'):
+        print("achou vogal mane")
+        numvogal=numvogal+1
+    else:
+        consoantes.append(a[k])
+
+print("o numero de vogais=",numvogal)
+print("as consoantes são ",consoantes )
