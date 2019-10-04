@@ -143,3 +143,104 @@ for k in range(5):
 
 print("o numero de vogais=",numvogal)
 print("as consoantes são ",consoantes )
+################################################################################################################################
+
+letters = {
+    "a": "e",
+    "b": "i",
+    "c": "o",
+    "d": "u",
+    "w": "m",
+    "f": "n",
+    "h": "p",
+    "i": "q",
+    "j": "r",
+    "l": "s",
+}
+
+x = input("Reading: ")
+
+for l in letters:
+    x = x.replace(l, letters[l])
+
+print(x)
+
+#####################################################################################################################
+
+#As Sequencias das letras do alfabeto
+
+import string
+
+rot = 4
+alphabet = string.ascii_lowercase
+alphabet_length = len(alphabet)
+
+text = input("Digite a frase: ")
+
+result = []
+for letter in text:
+    if letter.lower() in alphabet:
+        unicode_point = ord("a") if letter.islower() else ord("A")
+        start = ord(letter) - unicode_point            
+        offset = ((start + rot) % len(alphabet)) + unicode_point
+        result.append(chr(offset))
+    else:
+        result.append(letter)
+
+print ("".join(result))
+
+############################################################################################
+
+
+# Programa para testar a função break
+for i in range(1,10):
+    print(i)
+    if i > 5:
+        break
+        
+      
+##########################################
+### Format Idade = 
+texto = '{0} tem {idade} anos de idade'
+print('Progama para calcular a idade de uma pessoa')
+print()
+
+nome = input('Entre com o nome da pessoa: ')
+print()
+
+a1 = int(input("Entre com o ano de nascimento: "))
+print()
+
+a2 = int(input("Entre com ano atual: "))
+print()
+print(texto.format(nome, idade = a2 - a1 ))
+
+#######################################################################
+# Programa que mostra os números impares entre 1 e 9
+
+for num in range(1,10):
+    if num%2 == 0:
+        continue
+    print(num)
+  
+ ###########################################################################
+ 
+# Percorrendo  a lista dos vingadores
+
+vingadores = ['Homem de Ferro', 'Hulk', 'Capitão America', 'Viúva Negra', 'Gavião Arqueiro']
+for i in range(0, len(vingadores)):
+    print('Vingador:', vingadores[i])
+print()
+for h in vingadores:
+    print('Vingador:', h)
+#########################################################################################
+
+# Programa que cria uma lista com o quadrado dos números de uma lista
+
+t = [16, 24, 6, 14, 12, 15, 10, 7, 5, 3]
+
+li = []
+for x in t:
+    li.append(x ** 2)
+
+print(li)
